@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.photoUser {
+  img {
+    border-radius: 50%;
+    width: 40px;
+  }
+}
+
+.logOutIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}

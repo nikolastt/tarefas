@@ -1,0 +1,45 @@
+.container {
+  height: calc(100vh - 6rem);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  h2 {
+    margin-bottom: 0.7rem;
+  }
+  h4 {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.imgRocket {
+  width: 26%;
+  margin-bottom: 3rem;
+}
+
+.imgDonaters {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: #141a29;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.greenEnphasis {
+  color: rgb(2, 173, 108);
+}

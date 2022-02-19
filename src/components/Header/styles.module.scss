@@ -1,0 +1,36 @@
+.container {
+  background-color: #141a29;
+  display: flex;
+  height: 6rem;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  max-width: 1120px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  color: white;
+  align-items: center;
+
+  a {
+    margin-left: 2rem;
+  }
+}
+
+.button {
+  margin-left: auto;
+  transition: all 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
