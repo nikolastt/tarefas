@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  cursor: default;
 }
 
 .icon {
@@ -17,6 +18,7 @@
 
 .photoUser {
   img {
+    margin-right: 0.5rem;
     border-radius: 50%;
     width: 40px;
   }
@@ -26,4 +28,5 @@
   display: flex;
   align-items: center;
   margin-left: 0.5rem;
+  cursor: pointer;
 }

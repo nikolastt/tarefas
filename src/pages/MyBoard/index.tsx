@@ -1,3 +1,5 @@
+import { GetServerSideProps } from "next";
+import { getSession } from "next-auth/react";
 import React from "react";
 import { IoMdAdd } from "react-icons/io";
 import Task from "../../components/Task";
@@ -25,3 +27,18 @@ function MyBoard() {
 }
 
 export default MyBoard;
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const session = await getSession({ req });
+  if (!session?.id) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+};

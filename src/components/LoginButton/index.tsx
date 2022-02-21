@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 function LoginButton() {
-  const session = true;
+  const { data: session } = useSession();
 
   return (
     <>
@@ -12,16 +13,16 @@ function LoginButton() {
         <div className={styles.container}>
           <button className={styles.button}>
             <div className={styles.photoUser}>
-              <img src="/images/logo.svg" alt="Foto Usuário" />
+              <img src={session.user.image} alt="Foto Usuário" />
             </div>
-            <span>Olá Nikolas</span>
+            <span>Olá {session.user.name}</span>
           </button>
-          <div className={styles.logOutIcon}>
-            <FiLogOut />
+          <div onClick={() => signOut()} className={styles.logOutIcon}>
+            <FiLogOut color="#ffb800" />
           </div>
         </div>
       ) : (
-        <button className={styles.button}>
+        <button onClick={() => signIn("github")} className={styles.button}>
           <div className={styles.icon}>
             <AiOutlineGithub color="#ffb800" size="35" />
           </div>
