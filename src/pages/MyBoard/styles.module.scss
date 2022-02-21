@@ -1,0 +1,44 @@
+.container {
+  background-color: #17181f;
+  width: 75%;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.input {
+  width: 95%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-justify: center;
+  background-color: #2a2b38;
+
+  &:focus {
+    outline: 2px solid #ffb800;
+  }
+}
+
+.iconAdd {
+  width: 4%;
+  background-color: #ffb800;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import LoginButton from "../LoginButton";
 import styles from "./styles.module.scss";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -9,8 +10,13 @@ function Header() {
         <img src="/images/logo.svg" alt="" />
 
         <nav className={styles.nav}>
-          <a href="">Home</a>
-          <a href="">Meu board</a>
+          <Link href="/">
+            <a href="">Home</a>
+          </Link>
+
+          <Link href="/MyBoard">
+            <a href="">Meu board</a>
+          </Link>
 
           <div className={styles.button}>
             <LoginButton />
