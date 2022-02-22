@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import styles from "./styles/home.module.scss";
 
 export default function Home() {
@@ -24,3 +25,10 @@ export default function Home() {
     </main>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+    revalidate: 60,
+  };
+};

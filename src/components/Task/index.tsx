@@ -4,14 +4,25 @@ import { FaTrash } from "react-icons/fa";
 
 import styles from "./styles.module.scss";
 
-function Task() {
+interface taskProps {
+  task: {
+    id: string;
+    dateTask: string | Date;
+    dateFormated?: string;
+    name: string;
+    userId: string;
+    task: string;
+  };
+}
+
+function Task({ task }: taskProps) {
   return (
     <div className={styles.taskContainer}>
-      <h4>Tarefa</h4>
+      <h4>{task.task}</h4>
 
       <div className={styles.taskFooter}>
         <BsCalendar2EventFill color="#ffb800" />
-        <p>17 de Julho de 2021</p>
+        <p>{task.dateFormated}</p>
 
         <button>
           <FaTrash className={styles.trashIcon} color="red" /> Excluir
