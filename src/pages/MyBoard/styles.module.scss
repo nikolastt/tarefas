@@ -20,9 +20,22 @@
   border: none;
   text-justify: center;
   background-color: #2a2b38;
+  color: white;
 
   &:focus {
     outline: 2px solid #ffb800;
+  }
+}
+
+.onEditing {
+  display: flex;
+  margin-bottom: 1rem;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    color: #ffb800;
   }
 }
 
@@ -41,4 +54,10 @@
   &:hover {
     filter: brightness(0.8);
   }
+}
+
+.closeCircle {
+  background-color: transparent;
+  border: none;
+  margin-left: 0.5rem;
 }

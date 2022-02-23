@@ -7,19 +7,18 @@
   h4 {
     color: #fff;
     margin-bottom: 1rem;
+    line-height: 1.5rem;
+    background-color: #14151b;
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 }
 
 .taskFooter {
   display: flex;
-
-  p {
-    color: #ffb800;
-    margin-left: 0.5rem;
-  }
+  margin-top: 3rem;
 
   button {
-    margin-left: auto;
     background: transparent;
     border: none;
     color: white;
@@ -32,12 +31,30 @@
       filter: brightness(0.8);
     }
   }
+
+  .data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffb800;
+    width: 70%;
+  }
+
+  p {
+    margin-left: 0.5rem;
+  }
 }
 
-.trashContainer {
+.btnDeleteTask {
   margin-left: auto;
+}
+
+.btnUpdateTask {
+  margin-left: auto;
+  width: 15%;
 }
 
 .trashIcon {
   margin-right: 0.5rem;
+  width: 15%;
 }
